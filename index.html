@@ -11,6 +11,8 @@
   <title>Frontend Mentor | Insure landing page</title>
 
   <link rel="stylesheet" href="./style.css">
+
+  <script src="./script.js" async></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
 
@@ -24,7 +26,10 @@
     <a class='how'>HOW WE WORK</a>
     <a>BLOG</a>
     <a>ACCOUNT</a>
-    <button>VIEW PLANS</button>
+    <button class='navButton'>VIEW PLANS</button>
+    <a href= "javascript:void(0);" class ='hamburger' onclick="toggleNav()">
+      <img class='hamburgerImg' src='./images/icon-hamburger.svg'>
+    </a>
   </nav>
   <div class='intro' id='intro'>
     <div class='containerHeader'>
