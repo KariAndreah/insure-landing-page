@@ -114,13 +114,13 @@ ul{
     height: 300px;  
     margin-top:-285px;
 }
-.headerCol1 > .headerItems > .topBorder {
+ .topBorder {
     border-top: white 1px solid;
     width: 200px;
     padding-bottom: 40px;
     padding-top: 80px;
 }
-.headerCol1 > .headerItems > .topBorder > h1 {
+.topBorder > h1 {
     font-family: 'DM Serif Display', serif;
     font-size: 50px; 
     margin: auto;
@@ -257,7 +257,7 @@ img{
 /*------------ Footer ------------*/
 .footer{
     height: 395px;
-    width:100vw;
+    width:100%;
     background-color: hsl(0, 0%, 98%);
     background-image: url('./images/bg-pattern-footer-desktop.svg');
     background-repeat: no-repeat;
@@ -325,19 +325,21 @@ img{
 
 @media only screen and (max-width: 600px){
  .topnav{
-     margin-top: 30px;
-     margin-bottom:30px;
-     width:375px;
+     width:350px;
+     padding-top: 50px;
+     margin:auto;
+     margin-bottom:auto;  
  }
 
  .topnav a:not(:first-child), .navButton {
      display: none;
     }
-  .topnav a.hamburger {
+   .topnav a.hamburger {
     float: right;
     display: block;
   }
-.intro{
+
+  .intro{
     background-color: transparent;
       display: flex;
       width:100%;
@@ -362,48 +364,49 @@ img{
     flex:1;
     display: flex;
     max-width: 375px;
-    justify-content: center;
+    margin:auto;
+    justify-content: flex-start;
+    align-items: flex-start;
     text-align: center;
   }
   .headerItems{
     width:335px;
     max-width: 335px;
+    height: auto;
     margin:auto;
-    margin-top:-300px;
+    margin-top: -100px;
+    padding-bottom: 80px;
   }
-  .headerCol1 > .headerItems > .topBorder {
-    border-top:none;
-    width: 100%;
-    padding-bottom: none;
-    padding-top: none;
-}
-.headerCol1 > .headerItems > .topBorder > h1 {
+  .topBorder {
+    display: none;
+  }
+  .topBorder > h1 {
     margin: auto;
-    margin-top: 90px;
+    padding-top: 200px;
     width: auto;
-}
+  }
   .headerCol2{
     background-color: none;
     flex:1;
     max-width:auto;
     width:auto;
     margin-top: 0;
-    padding-left: -10px;
-  }
+   
+   }
 
-  #intro-img{
+   #intro-img{
     background-image:url('./images/image-intro-mobile.jpg');
     min-width:375px;
     width:375px;
     max-width:375px;
     height:auto;
     background-repeat: no-repeat;
-  }
-  .containerAbout{
+    }
+   .containerAbout{
       max-width: 375px;
       flex-wrap: wrap;
       justify-content: center;
-  }
+   }
   .titleContainer{
       width:375px;
       max-width: 375px;
@@ -433,6 +436,8 @@ img{
       text-align: center;
       background-image: none;
       flex-direction: column;
+      margin-bottom: 100px;
+      margin-top:auto;
   }
   .findContainer > div{
     width: 375px;
