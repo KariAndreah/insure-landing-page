@@ -424,10 +424,11 @@ img{
         text-align: center;
     }
     .aboutTitle{
-        width:300px;
-        max-width:300px;
+        width:275px;
+        max-width:275px;
         font-size: 40px;
-        margin-left: auto;
+        margin:auto;
+        margin-top:25px;
     }
     .aboutItem{
         text-align: center;
