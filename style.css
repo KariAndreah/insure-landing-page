@@ -14,7 +14,7 @@ ul{
     width:1110px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5px;
+    margin-bottom: auto;
     background-color: white;
     overflow: hidden;
     color: hsl(273, 4%, 51%);
@@ -36,7 +36,7 @@ ul{
       padding-left:550px;
   }
   .logoNav{
-      height:20px;
+      height:16px;
   }
   .topnav > button{
     background-color: white;
@@ -117,20 +117,20 @@ ul{
  .topBorder {
     border-top: white 1px solid;
     width: 200px;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
     padding-top: 80px;
 }
-.topBorder > h1 {
+.headerItems > h1 {
     font-family: 'DM Serif Display', serif;
-    font-size: 50px; 
+    font-size: 60px; 
     margin: auto;
     width: 500px;
-    margin-bottom: -25px;
-    line-height: 1;
+    margin-bottom: -5px;
 }
 .headerCol1 > div > p{
     font-size: 16px;
     font-family: 'Karla', sans-serif;
+    line-height: 1.6;
 }
 .headerButton{
     position: relative;
@@ -138,7 +138,7 @@ ul{
     color:white;
     height: 40px;
     width:150px;
-    border: white 1px solid;
+    border: white 2px solid;
     font-size: 10px;
     margin-top:40px;
     letter-spacing: 1px;
@@ -172,7 +172,7 @@ ul{
     border-top: hsl(270, 9%, 17%) 2px solid;
     width: 200px;
     height:auto;
-    margin-top:300px;
+    margin-top:325px;
 }
 
 .aboutTitle{
@@ -180,7 +180,7 @@ ul{
     margin:auto;
     margin-left:0;
     margin-top: 70px;
-    font-size: 50px;
+    font-size: 60px;
     display: flex;
     text-align: left;
 }
@@ -202,12 +202,13 @@ ul{
 }
 .aboutItem > h2{
     font-family: 'DM Serif Display', serif;
-    font-size: 20px;
+    font-size: 30px;
 }
 .aboutItem > p{
     font-family: 'Karla', sans-serif;
     font-size: 16px;
     color: hsl(273, 4%, 51%);
+    line-height: 1.6;
 }
 img{
     height: 90px;
@@ -234,7 +235,7 @@ img{
     color:white;
     height: 40px;
     width:150px;
-    border: white 1px solid;
+    border: white 2px solid;
     font-size: 10px;
     margin-left: 300px;  
     cursor: pointer;
@@ -247,11 +248,12 @@ img{
 .findContainer > div{
     color: white; 
     width: 475px;
+    height: auto;
     margin-left:75px;
     line-height: 0;
 }
 .findContainer >div>h2{
-    font-size: 50px;
+    font-size: 55px;
 }
 
 /*------------ Footer ------------*/
@@ -266,7 +268,7 @@ img{
     margin-top: 150px;
 }
 .iconBorder{
-    border-bottom: hsl(270, 9%, 17%) 0.2px solid;
+    border-bottom: hsl(270, 9%, 17%) 1px solid;
     width:1110px;
     margin:auto;
     margin-bottom:50px;
@@ -283,11 +285,13 @@ img{
     height:20px;
 }
 .icons2{
-    margin-left: 880px;
+    margin-left: 850px;
 }
 .icons2 > a > img{
     height: 20px;
     filter: invert(1);
+    padding-left: 5px;
+    padding-right:5px;
 }
 .icons2 > a:hover{
     filter: invert(1);
@@ -309,7 +313,7 @@ img{
 .footerBox > a{
     font-family: 'Karla', sans-serif;
     text-decoration: none;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     cursor: pointer;
 }
 .footerBox > a:hover{
@@ -318,7 +322,7 @@ img{
 
 .footerHead{
     color: hsl(273, 4%, 51%);
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 
 /* ---------- Mobile ----------- */
@@ -391,7 +395,6 @@ img{
     max-width:auto;
     width:auto;
     margin-top: 0;
-   
    }
 
    #intro-img{
