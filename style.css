@@ -3,40 +3,52 @@ body, html{
     margin:0;
     height: auto;
     font-family: 'Karla', sans-serif;
-    overflow-y: hidden;
 }
 ul{
     position: relative;
 }
-/* --------- TOPNAV ----------*/
-.topnav {
-    width:1100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
-    background-color: white;
-    overflow: hidden;
-    color: hsl(273, 4%, 51%);
-    font-family: 'Karla', sans-serif;
-    font-size: 10px;
-}
-.topnav>a{
-    padding-left: 15px;
-    padding-right:15px;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
-.topnav>a:hover{
-    cursor: pointer;
-    color: hsl(270, 9%, 17%);
-}
-.topnav > .how{
-    padding-left:550px;
+
+/*---------- TOPNAV ----------*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    width:1110px;
+    align-items: center;
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .logoNav{
     height:16px;
 }
-.topnav > button{
+
+.main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.main-nav li {
+    margin: auto;
+    list-style-type: none;
+}
+.main-nav li > a{
+    color: hsl(273, 4%, 51%);
+    text-decoration: none;
+}
+
+.nav-links {
+    margin-left: 40px;
+}
+
+.logo {
+    margin-top: 0;
+}
+
+.navButton{
     background-color: white;
     color:hsl(256, 26%, 20%);
     height: 40px;
@@ -44,23 +56,24 @@ ul{
     border: hsl(256, 26%, 20%)  2px solid;
     font-size: 10px;
     cursor: pointer;
-    margin-left:15px;
+    margin-left:25px;
     margin-top: 20px;
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
-.topnav > button:hover{
+.navButton:hover{
     border: white 1px solid;
     background-color: hsl(256, 26%, 20%);
     color:white;
 }
-.topnav .hamburger{
-    display:none;
+.navbar-toggle {
+    display: none;
 }
 
-.hamburgerImg{
-    height:25px;
+.nav-links:hover {
+    color: hsl(270, 9%, 17%);
 }
+
 /* --------- Header ----------*/
 #intro::before{
     content:'';
@@ -88,8 +101,8 @@ ul{
 }
 .intro{
     background-color:hsl(256, 26%, 20%);
+    background-size: cover;
     height: 600px;
-    width:100%;
     left:0;
 }
 
@@ -260,7 +273,8 @@ img{
 /*------------ Footer ------------*/
 .footer{
     height: 395px;
-    width:100%;
+    width: 100%;
+    min-width: 100%;
     background-color: hsl(0, 0%, 98%);
     background-image: url('./images/bg-pattern-footer-desktop.svg');
     background-repeat: no-repeat;
@@ -327,22 +341,48 @@ img{
 }
 
 /* ---------- Mobile ----------- */
-
 @media only screen and (max-width: 600px){
-    .topnav{
+
+    /* --------- TOPNAV MOBILE ----------*/
+
+    .navbar {
+        font-size: 18px;
+        padding-bottom: 10px;
         width:350px;
-        padding:none; 
-        padding-top: 25px;
-        margin:auto;
-        margin-bottom:auto; 
     }
-    .topnav a:not(:first-child), .navButton {
+
+    .main-nav {
+        list-style-type: none;
         display: none;
     }
-    .topnav a.hamburger {
-        float: right;
+
+    .nav-links {
+        text-decoration: none;
+        color: hsl(273, 4%, 51%);
+    }
+
+    .main-nav li {
+        text-align: center;
+        margin: 15px auto;
+    }
+
+    .logoNav{
+        height:16px;
+    }
+    .navbar-toggle {
+        position: absolute;
+        display: inline;
+        right: 20px;
+        font-size:24px;
+        cursor: pointer;
+    }
+
+    .active {
         display: block;
     }
+
+    /* ------- HEADER MOBILE--------*/
+
     .intro{ 
         background-color: transparent;
         display: flex;
@@ -357,6 +397,10 @@ img{
     }
     .containerHeader{
         background-color:hsl(256, 26%, 20%);
+        background-image:url('./images/bg-pattern-intro-right-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: 100px 300px;
         display:flex;
         width:375px;
         height: auto;  
@@ -392,6 +436,10 @@ img{
     }
     .headerCol2{
         background-color: none;
+        background-image: url('./images/bg-pattern-intro-left-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: 200px 1100px;
         flex:1;
         max-width:auto;
         width:auto;
@@ -405,6 +453,8 @@ img{
         height:auto;
         background-repeat: no-repeat;
     }
+
+    /*------------- ABOUT MOBILE ----------*/
    .containerAbout{
         max-width: 375px;
         flex-wrap: wrap;
@@ -433,6 +483,8 @@ img{
     .aboutItem{
         text-align: center;
     }
+
+    /*----------- FIND MOBILE ---------*/
     .findContainer{
         width:375px;
         height:350px;
@@ -443,6 +495,18 @@ img{
         flex-direction: column;
         margin-bottom: 100px;
         margin-top:30px;
+    }
+
+    #findContainer::after{
+        content:'';
+        position:absolute;
+        height: 100%;
+        width:100%;
+        background-image: url('./images/bg-pattern-how-we-work-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: 350px 350px;
+        background-position: right;
+        z-index: 1;
     }
     .findContainer > div{
         width: 375px;
@@ -456,9 +520,12 @@ img{
         margin-top:-20px;
     }
     .findContainer > button{
+        position: relative;
         margin-left: auto;
         margin-right: auto;
+        z-index: 10;
     }
+    /*----------- FOOTER MOBILE ---------*/
     .footer{
         background-image: none;
         height:auto;
@@ -481,7 +548,7 @@ img{
     .icons{
         width:125px;
         margin: auto;
-}
+    }
     .icons2{
         margin:auto;
         margin-top: 20px;

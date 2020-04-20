@@ -18,18 +18,31 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css"
+    integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+
 </head>
 
 <body>
-  <nav class="topnav" id="topnav">
+  <nav class="navbar">
+    <span class="navbar-toggle" id="js-navbar-toggle">
+      <i class="fas fa-bars"></i>
+    </span>
     <img class='logoNav' src='./images/logo.svg' alt='logo'>
-    <a class='how'>HOW WE WORK</a>
-    <a>BLOG</a>
-    <a>ACCOUNT</a>
-    <button class='navButton'>VIEW PLANS</button>
-    <a href="javascript:void(0);" class='hamburger' onclick="toggleNav()">
-      <img class='hamburgerImg' src='./images/icon-hamburger.svg' alt='navHamburger'>
-    </a>
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a href="#" class="nav-links">HOW WE WORK</a>
+      </li>
+      <li>
+        <a href="#" class="nav-links">BLOG</a>
+      </li>
+      <li>
+        <a href="#" class="nav-links">ACCOUNT</a>
+      </li>
+      <li>
+        <button class='navButton'>VIEW PLANS</button>
+      </li>
+    </ul>
   </nav>
   <div class='intro' id='intro'>
     <div class='containerHeader'>
@@ -38,7 +51,7 @@
           <div class='topBorder'></div>
           <h1>Humanizing</h1>
           <h1>your insurance.</h1>
-          <p>Get your afe insurance coverage easier and faster. We blend our expertise
+          <p>Get your safe insurance coverage easier and faster. We blend our expertise
             and technology to help you find the plan that’s right for you. Ensure you
             and your loved ones are protected.</p>
           <button class='headerButton'>VIEW PLANS</button>
@@ -74,7 +87,7 @@
     </div>
   </div>
   </div>
-  <div class='findContainer'>
+  <div class='findContainer' id='findContainer'>
     <div>
       <h2>Find out more</h2>
       <h2>about how we work</h2>
