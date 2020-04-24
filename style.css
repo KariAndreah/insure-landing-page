@@ -1,6 +1,8 @@
 body, html{
     width:100%;
+    height:100%;
     margin:0;
+    padding:0;
     height: auto;
     font-family: 'Karla', sans-serif;
 }
@@ -9,70 +11,65 @@ ul{
 }
 
 /*---------- TOPNAV ----------*/
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0;
-    height: 70px;
-    width:1110px;
-    align-items: center;
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding-top:1em;
+    padding-bottom:0;
+    align-items:center;
+    min-height: 20px;
     margin:auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.logoNav{
+    font-family: 'Karla', sans-serif;
+    max-width:1110px;
+  }
+  .logoNav{
     height:16px;
+    padding-left:10px;
 }
-
-.main-nav {
-    display: flex;
-    margin-right: 30px;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-.main-nav li {
-    margin: auto;
-    list-style-type: none;
-}
-.main-nav li > a{
-    color: hsl(273, 4%, 51%);
-    text-decoration: none;
-}
-
-.nav-links {
-    margin-left: 40px;
-}
-
-.logo {
-    margin-top: 0;
-}
-
-.navButton{
-    background-color: white;
-    color:hsl(256, 26%, 20%);
-    height: 40px;
-    width:150px;
-    border: hsl(256, 26%, 20%)  2px solid;
-    font-size: 10px;
+  .nav-links{
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    width: 500px;
+  }
+  .nav-links li{
+    list-style:none;
+    display: inline;
+  }
+  .nav-links a{
+      color: hsl(273, 4%, 51%);
+      text-decoration: none;
+      letter-spacing: 2px;
+  }
+  .nav-links a:hover {
+      color: hsl(270, 9%, 17%);
+  }
+  .navButton{
+      display:inline;
+      background-color: white;
+      color:hsl(256, 26%, 20%);
+      height: 40px;
+      width:150px;
+      border: hsl(256, 26%, 20%)  2px solid;
+      font-size: 10px;
+      cursor: pointer;
+      letter-spacing: 1px;
+  }
+  
+  
+  .navButton:hover{
+      border: white 1px solid;
+      background-color: hsl(256, 26%, 20%);
+      color:white;
+  }
+  
+  .burger{
+    visibility: hidden;
+    padding-right:10px;
     cursor: pointer;
-    margin-left:25px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-.navButton:hover{
-    border: white 1px solid;
-    background-color: hsl(256, 26%, 20%);
-    color:white;
-}
-.navbar-toggle {
-    display: none;
-}
-
-.nav-links:hover {
-    color: hsl(270, 9%, 17%);
-}
+  }
+  
+ 
 
 /* --------- Header ----------*/
 #intro::before{
@@ -344,43 +341,33 @@ img{
 @media only screen and (max-width: 600px){
 
     /* --------- TOPNAV MOBILE ----------*/
-
-    .navbar {
-        font-size: 18px;
-        padding-bottom: 10px;
-        width:350px;
-    }
-
-    .main-nav {
-        list-style-type: none;
-        display: none;
-    }
-
-    .nav-links {
-        text-decoration: none;
-        color: hsl(273, 4%, 51%);
-    }
-
-    .main-nav li {
-        text-align: center;
-        margin: 15px auto;
-    }
-
-    .logoNav{
-        height:16px;
-    }
-    .navbar-toggle {
-        position: absolute;
-        display: inline;
-        right: 20px;
-        font-size:24px;
-        cursor: pointer;
-    }
-
-    .active {
-        display: block;
-    }
-
+      .nav-links{
+        display:none;
+        position:absolute;
+        left:0px;
+        height:400px;
+        width:92%;
+        top:30px;
+        background-color:hsl(256, 26%, 20%);
+        background-image: url('./images/bg-pattern-how-we-work-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 200px 300px;
+        z-index: 1;
+      }
+      .nav-links a{
+        color:white;
+        margin:auto;
+      }
+      .burger{
+        display:block;
+        visibility: initial;
+      }
+      .navButton{
+        margin:auto;
+      }
+    
+ 
     /* ------- HEADER MOBILE--------*/
 
     .intro{ 
@@ -390,10 +377,12 @@ img{
         height:1000px;
     }
     #intro::after{
+        position: initial;
         background-image: none;
     }
     #intro::before{
         background-image: none;
+        position: unset;
     }
     .containerHeader{
         background-color:hsl(256, 26%, 20%);
@@ -474,8 +463,8 @@ img{
         text-align: center;
     }
     .aboutTitle{
-        width:275px;
-        max-width:275px;
+        width:290px;
+        max-width:290px;
         font-size: 40px;
         margin:auto;
         margin-top:25px;
@@ -572,3 +561,10 @@ img{
         margin-top:10px;
     }
 }
+.nav-active{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+  
+  

@@ -1,10 +1,17 @@
-Day 1: 
+Here is a landing page based on a challenge from frontend-mentor. [Here it is live!](https:kariandreah.github.io/insure-landing-page)
+
+Production Journal
+# Day 1: 
 Styled whole page except topnav and the svg background elements.
 
-Day 2: 
+# Day 2: 
 Finished whole desktop design. 
-**************Tomorrow********************
+**Tomorrow**
 Need to style mobile design
+
+# Day 3:
+Was having issues with mobile nav. Realized you create the div and then toggle the display. My nav ran into issues with the positioning intro:after/ :before. But I realized that I just needed to change them from absolute. 
+
 # Frontend Mentor - Insure landing page
 
 ![Design preview for the Insure landing page coding challenge](./design/desktop-preview.jpg)
