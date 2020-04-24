@@ -1,4 +1,4 @@
-Here is a landing page based on a challenge from frontend-mentor. [Here it is live!](https:kariandreah.github.io/insure-landing-page)
+Here is a landing page based on a challenge from frontend-mentor. [Here it is live!](https://kariandreah.github.io/insure-landing-page/)
 
 Production Journal
 # Day 1: 
